@@ -1,6 +1,6 @@
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { CallToolRequestSchema, ListToolsRequestSchema } from "@modelcontextprotocol/sdk/types.js";
-import { Helm, HelmApiError, HelmInputError, DEFAULT_BASE_URL, type HelmChainId, type HelmQuote } from "@summit-pc/helm";
+import { Helm, HelmApiError, HelmInputError, DEFAULT_BASE_URL, type HelmChainId, type HelmQuote } from "helmswap";
 
 const FORBIDDEN = ["privateKey", "private_key", "secretKey", "mnemonic", "seed", "seedPhrase", "signer", "wallet", "account"];
 

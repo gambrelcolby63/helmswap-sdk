@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it } from "vitest";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { InMemoryTransport } from "@modelcontextprotocol/sdk/inMemory.js";
-import { Helm } from "@summit-pc/helm";
+import { Helm } from "helmswap";
 import { startMock, PAYOUT, USER, WETH, USDC } from "../../helm-sdk/tests/mockServer";
 import { createHelmMcpServer } from "../src/server";
 

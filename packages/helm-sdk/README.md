@@ -1,4 +1,4 @@
-# @summit-pc/helm — HelmSwap integrator SDK
+# helmswap — HelmSwap integrator SDK
 
 Add HelmSwap quotes and **unsigned** swap transactions to your app. Your user always signs in their own wallet. Helm never holds keys, never signs, and never broadcasts.
 
@@ -7,11 +7,11 @@ Default host: **https://helmswap.com** (live since 18 Nov 2026, 11:57 PM CT).
 ## 5-minute quickstart
 
 ```bash
-npm install @summit-pc/helm
+npm install helmswap
 ```
 
 ```ts
-import { Helm } from "@summit-pc/helm";
+import { Helm } from "helmswap";
 
 const helm = new Helm({
   // baseUrl defaults to https://helmswap.com

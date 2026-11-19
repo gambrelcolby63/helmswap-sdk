@@ -1,5 +1,5 @@
 /**
- * @summit-pc/helm: integrator HTTP client for the HelmSwap v1 API at https://helmswap.com.
+ * helmswap: integrator HTTP client for the HelmSwap v1 API at https://helmswap.com.
  * Never accepts, stores or logs a private key. Never signs or broadcasts.
  */
 export { Helm, looksLikeSecretKey, DEFAULT_BASE_URL } from "./client.js";

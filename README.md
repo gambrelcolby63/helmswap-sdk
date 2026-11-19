@@ -6,19 +6,19 @@ Live since 18 November 2026, 11:57 PM CT, on **Solana, Base, BNB Chain, Ethereum
 
 | Package | npm (after you publish) | What it does |
 | --- | --- | --- |
-| `@summit-pc/helm` | `packages/helm-sdk` | Quote + unsigned swap client |
-| `@summit-pc/helm-mcp` | `packages/helm-mcp` | stdio MCP server (`get_quote`, `build_swap`) |
+| `helmswap` | `packages/helm-sdk` | Quote + unsigned swap client |
+| `helmswap-mcp` | `packages/helm-mcp` | stdio MCP server (`get_quote`, `build_swap`) |
 
 Neither package holds keys, signs, or broadcasts. The user signs in their own wallet.
 
 ## Quickstart
 
 ```bash
-npm install @summit-pc/helm
+npm install helmswap
 ```
 
 ```ts
-import { Helm } from "@summit-pc/helm";
+import { Helm } from "helmswap";
 
 const helm = new Helm({ payoutAddress: "0xYourPayout" }); // 20% of Helm's fee
 const quote = await helm.quote({ chainId: 8453, tokenIn: "ETH", tokenOut: USDC, amountIn: 10n ** 16n });
@@ -37,7 +37,7 @@ const built = await helm.buildTx({ quote, recipient: userSolanaWallet });
 MCP (after publish):
 
 ```json
-{ "mcpServers": { "helmswap": { "command": "npx", "args": ["-y", "@summit-pc/helm-mcp"], "env": { "HELM_REFERRER": "0xYourPayout" } } } }
+{ "mcpServers": { "helmswap": { "command": "npx", "args": ["-y", "helmswap-mcp"], "env": { "HELM_REFERRER": "0xYourPayout" } } } }
 ```
 
 ## Fees (disclosed)

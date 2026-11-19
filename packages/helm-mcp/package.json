@@ -1,5 +1,5 @@
 {
-  "name": "@summit-pc/helm-mcp",
+  "name": "helmswap-mcp",
   "version": "0.1.0",
   "description": "MCP server for HelmSwap: get_quote and build_swap return disclosed 10/50/100 bps quotes and unsigned transactions on Solana, Base, BNB Chain, Ethereum and Robinhood Chain. Never holds keys or broadcasts.",
   "keywords": [
@@ -51,12 +51,11 @@
   },
   "publishConfig": {
     "access": "public",
-    "provenance": true,
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.20.0",
-    "@summit-pc/helm": "0.1.0"
+    "helmswap": "0.1.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

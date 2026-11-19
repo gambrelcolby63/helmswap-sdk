@@ -1,4 +1,4 @@
-# @summit-pc/helm-mcp — HelmSwap MCP server
+# helmswap-mcp — HelmSwap MCP server
 
 stdio MCP server so AI agents can quote and build **unsigned** HelmSwap transactions. Helm never holds keys, never signs, and never broadcasts. The user's wallet signs.
 
@@ -14,7 +14,7 @@ There is **no** execute, sign, or broadcast tool.
 ## Install (after npm publish)
 
 ```bash
-npx -y @summit-pc/helm-mcp
+npx -y helmswap-mcp
 ```
 
 Claude Desktop / Cursor MCP config:
@@ -24,7 +24,7 @@ Claude Desktop / Cursor MCP config:
   "mcpServers": {
     "helmswap": {
       "command": "npx",
-      "args": ["-y", "@summit-pc/helm-mcp"],
+      "args": ["-y", "helmswap-mcp"],
       "env": {
         "HELM_REFERRER": "0xYourPayout"
       }

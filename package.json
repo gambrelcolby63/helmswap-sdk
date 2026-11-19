@@ -1,7 +1,7 @@
 {
   "name": "helmswap-sdk",
   "private": true,
-  "description": "HelmSwap public SDK and MCP server monorepo. Packages publish separately as @summit-pc/helm and @summit-pc/helm-mcp.",
+  "description": "HelmSwap public SDK and MCP server monorepo. Packages publish separately as helmswap and helmswap-mcp.",
   "license": "MIT",
   "author": "Summit Private Credit LLC",
   "homepage": "https://helmswap.com",

@@ -14,7 +14,7 @@
     {
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
-      "identifier": "@summit-pc/helm-mcp",
+      "identifier": "helmswap-mcp",
       "version": "0.1.0",
       "transport": { "type": "stdio" },
       "environmentVariables": [

@@ -4,10 +4,9 @@ Nothing in this folder has been published or pushed. Run these yourself after yo
 
 ## 0. npm org (required for the scoped names)
 
-The packages are `@summit-pc/helm` and `@summit-pc/helm-mcp`. The npm org `summit-pc` did not exist on 19 Nov 2026 (registry returned ResourceNotFound). All of these names were also unused (HTTP 404): `@summit-pc/helm`, `@summit-pc/helm-mcp`, `helmswap`, `helmswap-sdk`, `helmswap-mcp`.
+The packages are published unscoped as `helmswap` (SDK) and `helmswap-mcp` (MCP server), so no npm org is needed.
 
 1. Create an npm account if you do not have one: https://www.npmjs.com/signup
-2. Create a public org named `summit-pc`: https://www.npmjs.com/org/create
 3. Then:
 
 ```bash
@@ -33,18 +32,18 @@ Do not force-push. Do not add secrets.
 From this repo, after `npm login` and `npm test && npm run build`:
 
 ```bash
-# SDK first — the MCP package depends on @summit-pc/helm@0.1.0
-npm publish --workspace=@summit-pc/helm --access public
+# SDK first — the MCP package depends on helmswap@0.1.0
+npm publish --workspace=helmswap --access public
 
 # Then the MCP server
-npm publish --workspace=@summit-pc/helm-mcp --access public
+npm publish --workspace=helmswap-mcp --access public
 ```
 
 `publishConfig.provenance` is on. If npm refuses provenance from your laptop, either publish from GitHub Actions later or temporarily remove `"provenance": true` from each package's `publishConfig` and retry `npm publish --access public`.
 
 Confirm:
 
-- https://www.npmjs.com/package/@summit-pc/helm
-- https://www.npmjs.com/package/@summit-pc/helm-mcp
+- https://www.npmjs.com/package/helmswap
+- https://www.npmjs.com/package/helmswap-mcp
 
 Do not run `npm publish` from an agent session.

@@ -17,7 +17,7 @@ startCommand:
   commandFunction: |-
     (config) => ({
       command: 'npx',
-      args: ['-y', '@summit-pc/helm-mcp'],
+      args: ['-y', 'helmswap-mcp'],
       env: {
         HELM_BASE_URL: config.helmBaseUrl || 'https://helmswap.com',
         ...(config.helmReferrer ? { HELM_REFERRER: config.helmReferrer } : {}),

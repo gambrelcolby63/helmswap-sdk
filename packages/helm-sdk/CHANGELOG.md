@@ -2,7 +2,7 @@
 
 ## 0.1.0
 
-- First public release of `@summit-pc/helm`.
+- First public release of `helmswap`.
 - HTTP client for HelmSwap `/api/v1/quote` and `/api/v1/build-tx`.
 - Default `baseUrl` is `https://helmswap.com`.
 - Live chains: Base, BNB Chain, Ethereum, Robinhood Chain, and Solana.

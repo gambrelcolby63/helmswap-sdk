@@ -1,5 +1,5 @@
 /**
- * Public types for @summit-pc/helm. These mirror the HelmSwap /api/v1 responses.
+ * Public types for helmswap. These mirror the HelmSwap /api/v1 responses.
  * The server is the source of truth for routing, fees, quote tickets, surplus terms,
  * the tokenized-stock block and sanctions.
  */
