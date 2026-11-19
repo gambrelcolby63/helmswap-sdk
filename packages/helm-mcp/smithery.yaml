@@ -1,0 +1,27 @@
+# Smithery config for the local stdio server (upload as an MCPB bundle, or use after npm publish).
+# HelmSwap does not yet expose a hosted Streamable HTTP MCP URL. Do not submit a URL listing.
+# Never set a private-key env var. Execute/sign tools are not included.
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required: []
+    properties:
+      helmReferrer:
+        type: string
+        description: Optional payout address (EVM 0x or Solana base58). Receives 20% of Helm's disclosed fee. Address only, never a key.
+      helmBaseUrl:
+        type: string
+        default: https://helmswap.com
+        description: HelmSwap API origin.
+  commandFunction: |-
+    (config) => ({
+      command: 'npx',
+      args: ['-y', '@summit-pc/helm-mcp'],
+      env: {
+        HELM_BASE_URL: config.helmBaseUrl || 'https://helmswap.com',
+        ...(config.helmReferrer ? { HELM_REFERRER: config.helmReferrer } : {}),
+      }
+    })
+  exampleConfig:
+    helmBaseUrl: https://helmswap.com

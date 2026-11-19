@@ -1,0 +1,24 @@
+{
+  "name": "helmswap-sdk",
+  "private": true,
+  "description": "HelmSwap public SDK and MCP server monorepo. Packages publish separately as @summit-pc/helm and @summit-pc/helm-mcp.",
+  "license": "MIT",
+  "author": "Summit Private Credit LLC",
+  "homepage": "https://helmswap.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gambrelcolby63/helmswap-sdk.git"
+  },
+  "workspaces": [
+    "packages/helm-sdk",
+    "packages/helm-mcp"
+  ],
+  "scripts": {
+    "test": "npm test --workspaces",
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.gambrelcolby63/helm-mcp",
+  "title": "HelmSwap",
+  "description": "HelmSwap quotes and unsigned swaps. Disclosed 10/50/100 bps fees. Never signs.",
+  "repository": {
+    "url": "https://github.com/gambrelcolby63/helmswap-sdk",
+    "source": "github",
+    "subfolder": "packages/helm-mcp"
+  },
+  "version": "0.1.0",
+  "websiteUrl": "https://helmswap.com",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "@summit-pc/helm-mcp",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        {
+          "name": "HELM_REFERRER",
+          "description": "Optional payout address (EVM or Solana). Receives 20 percent of Helm's disclosed fee. Address only, never a key.",
+          "isRequired": false,
+          "isSecret": false
+        },
+        {
+          "name": "HELM_BASE_URL",
+          "description": "HelmSwap API origin. Defaults to https://helmswap.com.",
+          "isRequired": false,
+          "isSecret": false,
+          "default": "https://helmswap.com"
+        }
+      ]
+    }
+  ]
+}

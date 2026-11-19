@@ -1,0 +1,66 @@
+{
+  "name": "@summit-pc/helm",
+  "version": "0.1.0",
+  "description": "Integrator HTTP client for the HelmSwap v1 API: quote and unsigned swap transactions on Solana, Base, BNB Chain, Ethereum and Robinhood Chain. Disclosed 10/50/100 bps fees (pump.fun curves 1%). Keyless referrer share is 20% of Helm's fee. Never holds keys, never signs, never broadcasts.",
+  "license": "MIT",
+  "author": "Summit Private Credit LLC",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "keywords": [
+    "helmswap",
+    "helm-swap",
+    "defi",
+    "dex-aggregator",
+    "swap-sdk",
+    "non-custodial",
+    "disclosed-fee",
+    "solana",
+    "pump-fun",
+    "base",
+    "ethereum",
+    "bnb-chain",
+    "robinhood-chain"
+  ],
+  "homepage": "https://helmswap.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gambrelcolby63/helmswap-sdk.git",
+    "directory": "packages/helm-sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/gambrelcolby63/helmswap-sdk/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true,
+    "registry": "https://registry.npmjs.org/"
+  }
+}

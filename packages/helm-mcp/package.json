@@ -1,0 +1,66 @@
+{
+  "name": "@summit-pc/helm-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for HelmSwap: get_quote and build_swap return disclosed 10/50/100 bps quotes and unsigned transactions on Solana, Base, BNB Chain, Ethereum and Robinhood Chain. Never holds keys or broadcasts.",
+  "keywords": [
+    "helmswap",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "defi",
+    "non-custodial",
+    "solana",
+    "base",
+    "pump-fun"
+  ],
+  "license": "MIT",
+  "author": "Summit Private Credit LLC",
+  "homepage": "https://helmswap.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gambrelcolby63/helmswap-sdk.git",
+    "directory": "packages/helm-mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/gambrelcolby63/helmswap-sdk/issues"
+  },
+  "type": "module",
+  "mcpName": "io.github.gambrelcolby63/helm-mcp",
+  "main": "./dist/index.js",
+  "bin": {
+    "helm-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "server.json",
+    "smithery.yaml",
+    "Dockerfile"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "start": "node dist/index.js",
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.build.json --noEmit",
+    "prepack": "npm run build"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true,
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0",
+    "@summit-pc/helm": "0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  }
+}
