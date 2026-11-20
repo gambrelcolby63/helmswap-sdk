@@ -19,7 +19,7 @@ const helm = new Helm({
 });
 
 const quote = await helm.quote({
-  chainId: 8453, // Base. Or 56, 1, 4663, or { chain: "solana", tokenIn: "SOL", ... }
+  chainId: 8453, // Base. Or 56, 1, 4663, 57073, 999, 99901, 5042, or { chain: "solana", tokenIn: "SOL", ... }
   tokenIn: "ETH",
   tokenOut: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913", // USDC on Base
   amountIn: 10n ** 16n, // 0.01 ETH
@@ -49,10 +49,14 @@ See `examples/quickstart.ts` for a runnable version (`npx tsx examples/quickstar
 | BNB Chain (`56`) | Live. Same fee router address |
 | Ethereum (`1`) | Live. Same fee router address |
 | Robinhood Chain (`4663`) | Live. Same fee router address |
+| Ink (`57073`) | Live. Same fee router address |
+| HyperEVM (`999`) | Live. Same fee router address. Native coin is HYPE (pass `ETH` as the native symbol). |
+| Elysium (`99901`) | Live. Same fee router address. Native coin is HYPE (pass `ETH` as the native symbol). |
+| Arc (`5042`) | Live. USDC-only 1.3b build at the same address. USDC is the gas token; no native ETH leg. |
 | Solana (`chain: "solana"`) | Live. Fee wallet `A53weMtWcL4Y1tNPj8778HaiwacpzQPU9P8A3HTP7j3G`. Routes: Orca Whirlpools, PumpSwap, pump.fun bonding curves |
 | Arbitrum (`42161`) and Polygon (`137`) | Quotes may return; **build-tx is refused** until a fee router is deployed. Not live. |
 
-Native assets: pass `ETH`, `BNB`, `POL` or `SOL` (or the usual wrapped-native mint / `0xEeee…` sentinel).
+Native assets: pass `ETH`, `BNB`, `HYPE` (or `ETH` on HyperEVM/Elysium), `POL` or `SOL` (or the usual wrapped-native mint / `0xEeee…` sentinel). Arc has no native leg — use the USDC address.
 
 ## Fees (disclosed)
 

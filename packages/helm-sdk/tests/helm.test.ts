@@ -118,10 +118,10 @@ describe("blocks and chains", () => {
     expect(err.isTokenizedEquityBlocked).toBe(true);
   });
 
-  it("accepts Base, BNB, Ethereum, Robinhood Chain, Arbitrum and Polygon; rejects unknown EVM ids", async () => {
+  it("accepts Base, BNB, Ethereum, Robinhood Chain, Ink, HyperEVM, Elysium, Arc, Arbitrum and Polygon; rejects unknown EVM ids", async () => {
     mock = await startMock();
     const helm = new Helm({ baseUrl: mock.baseUrl });
-    for (const chainId of [8453, 56, 1, 4663, 42161, 137] as const) {
+    for (const chainId of [8453, 56, 1, 4663, 57073, 999, 99901, 5042, 42161, 137] as const) {
       const q = await helm.quote({ ...swap, chainId });
       expect(q.chainId).toBe(chainId);
       expect(q.chain).toBe(chainId);

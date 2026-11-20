@@ -4,8 +4,8 @@
  * the tokenized-stock block and sanctions.
  */
 
-/** Live EVM chains with a deployed StatelessFeeRouter. */
-export type HelmLiveEvmChainId = 8453 | 56 | 1 | 4663;
+/** Live EVM chains with a deployed fee router (v1.3, or Arc 1.3b). */
+export type HelmLiveEvmChainId = 8453 | 56 | 1 | 4663 | 57073 | 999 | 99901 | 5042;
 
 /**
  * EVM chain IDs the v1 API accepts.
@@ -14,7 +14,7 @@ export type HelmLiveEvmChainId = 8453 | 56 | 1 | 4663;
  */
 export type HelmChainId = HelmLiveEvmChainId | 42161 | 137;
 
-/** Live trading venues: the four fee-router EVM chains, plus Solana. */
+/** Live trading venues: the eight fee-router EVM chains, plus Solana. */
 export type HelmChain = HelmLiveEvmChainId | "solana";
 
 export const HELM_CHAINS: Readonly<Record<HelmChainId, { name: string; nativeSymbol: string; live: boolean }>> = Object.freeze({
@@ -22,12 +22,16 @@ export const HELM_CHAINS: Readonly<Record<HelmChainId, { name: string; nativeSym
   56: { name: "BNB Chain", nativeSymbol: "BNB", live: true },
   1: { name: "Ethereum", nativeSymbol: "ETH", live: true },
   4663: { name: "Robinhood Chain", nativeSymbol: "ETH", live: true },
+  57073: { name: "Ink", nativeSymbol: "ETH", live: true },
+  999: { name: "HyperEVM", nativeSymbol: "HYPE", live: true },
+  99901: { name: "Elysium", nativeSymbol: "HYPE", live: true },
+  5042: { name: "Arc", nativeSymbol: "USDC", live: true },
   42161: { name: "Arbitrum One", nativeSymbol: "ETH", live: false },
   137: { name: "Polygon", nativeSymbol: "POL", live: false },
 });
 
-export const HELM_CHAIN_IDS: readonly HelmChainId[] = Object.freeze([8453, 56, 1, 4663, 42161, 137] as HelmChainId[]);
-export const HELM_LIVE_EVM_CHAIN_IDS: readonly HelmLiveEvmChainId[] = Object.freeze([8453, 56, 1, 4663] as HelmLiveEvmChainId[]);
+export const HELM_CHAIN_IDS: readonly HelmChainId[] = Object.freeze([8453, 56, 1, 4663, 57073, 999, 99901, 5042, 42161, 137] as HelmChainId[]);
+export const HELM_LIVE_EVM_CHAIN_IDS: readonly HelmLiveEvmChainId[] = Object.freeze([8453, 56, 1, 4663, 57073, 999, 99901, 5042] as HelmLiveEvmChainId[]);
 
 /** Disclosed fee policy. Informational: the server applies the rates; this client never changes them. */
 export const HELM_FEE_POLICY = Object.freeze({

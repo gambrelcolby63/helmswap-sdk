@@ -25,7 +25,7 @@ function clientFromEnv(): Helm {
 }
 
 const CHAIN_HELP =
-  "Live: 8453 (Base), 56 (BNB Chain), 1 (Ethereum), 4663 (Robinhood Chain), or chain='solana'. Arbitrum (42161) and Polygon (137) can quote but cannot build until a fee router is deployed.";
+  "Live: 8453 (Base), 56 (BNB Chain), 1 (Ethereum), 4663 (Robinhood Chain), 57073 (Ink), 999 (HyperEVM), 99901 (Elysium), 5042 (Arc), or chain='solana'. Arbitrum (42161) and Polygon (137) can quote but cannot build until a fee router is deployed.";
 
 const FEE_HELP =
   "Helm fee (disclosed, not hidden in the price): 10 bps majors, 50 bps listed, 100 bps long-tail / pump.fun bonding-curve coins. pump.fun also charges its own venue fee (~1.25%), paid to the creator and pump.fun, shown separately. Keyless referrer share is 20% of Helm's fee when HELM_REFERRER or the referrer argument is set. Helm never signs or broadcasts; the user signs in their own wallet.";
@@ -59,10 +59,10 @@ function parseChain(args: Record<string, unknown>): { chain?: "solana"; chainId?
   if (raw == null || raw === "") return { chainId: 8453 };
   const s = String(raw).trim().toLowerCase();
   if (s === "solana" || s === "sol") return { chain: "solana" };
-  const aliases: Record<string, HelmChainId> = { base: 8453, bnb: 56, bsc: 56, eth: 1, ethereum: 1, robinhood: 4663, rh: 4663, arbitrum: 42161, arb: 42161, polygon: 137, matic: 137 };
+  const aliases: Record<string, HelmChainId> = { base: 8453, bnb: 56, bsc: 56, eth: 1, ethereum: 1, robinhood: 4663, rh: 4663, ink: 57073, hyperevm: 999, elysium: 99901, arc: 5042, arbitrum: 42161, arb: 42161, polygon: 137, matic: 137 };
   if (s in aliases) return { chainId: aliases[s] };
   const n = Number(s);
-  if ([8453, 56, 1, 4663, 42161, 137].includes(n)) return { chainId: n as HelmChainId };
+  if ([8453, 56, 1, 4663, 57073, 999, 99901, 5042, 42161, 137].includes(n)) return { chainId: n as HelmChainId };
   throw new HelmInputError(`Unsupported chain '${raw}'. ${CHAIN_HELP}`);
 }
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- Live chains now include Ink, HyperEVM, Elysium and Arc, in addition to Solana, Base, BNB Chain, Ethereum and Robinhood Chain.
+
 ## 0.1.0
 
 - First public release of `helmswap`.

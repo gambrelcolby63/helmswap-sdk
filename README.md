@@ -2,7 +2,7 @@
 
 Public TypeScript SDK and MCP server for [HelmSwap](https://helmswap.com), a non-custodial swap terminal operated by Summit Private Credit LLC.
 
-Live since 18 November 2026, 11:57 PM CT, on **Solana, Base, BNB Chain, Ethereum and Robinhood Chain**.
+Live since 18 November 2026, 11:57 PM CT, on **Solana, Base, BNB Chain, Ethereum, Robinhood Chain, Ink, HyperEVM, Elysium and Arc**.
 
 | Package | npm (after you publish) | What it does |
 | --- | --- | --- |

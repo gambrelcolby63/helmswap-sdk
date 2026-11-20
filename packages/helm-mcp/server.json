@@ -2,21 +2,23 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.gambrelcolby63/helm-mcp",
   "title": "HelmSwap",
-  "description": "HelmSwap quotes and unsigned swaps. Disclosed 10/50/100 bps fees. Never signs.",
+  "description": "HelmSwap quotes and unsigned swaps on 9 chains. Disclosed 10/50/100 bps fees. Never signs.",
   "repository": {
     "url": "https://github.com/gambrelcolby63/helmswap-sdk",
     "source": "github",
     "subfolder": "packages/helm-mcp"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "websiteUrl": "https://helmswap.com",
   "packages": [
     {
       "registryType": "npm",
       "registryBaseUrl": "https://registry.npmjs.org",
       "identifier": "helmswap-mcp",
-      "version": "0.1.0",
-      "transport": { "type": "stdio" },
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      },
       "environmentVariables": [
         {
           "name": "HELM_REFERRER",

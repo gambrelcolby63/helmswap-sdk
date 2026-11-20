@@ -1,7 +1,7 @@
 {
   "name": "helmswap",
-  "version": "0.1.0",
-  "description": "Integrator HTTP client for the HelmSwap v1 API: quote and unsigned swap transactions on Solana, Base, BNB Chain, Ethereum and Robinhood Chain. Disclosed 10/50/100 bps fees (pump.fun curves 1%). Keyless referrer share is 20% of Helm's fee. Never holds keys, never signs, never broadcasts.",
+  "version": "0.1.1",
+  "description": "Integrator HTTP client for the HelmSwap v1 API: quote and unsigned swap transactions on Solana, Base, BNB Chain, Ethereum, Robinhood Chain, Ink, HyperEVM, Elysium and Arc. Disclosed 10/50/100 bps fees (pump.fun curves 1%). Never holds keys, never signs, never broadcasts.",
   "license": "MIT",
   "author": "Summit Private Credit LLC",
   "type": "module",
@@ -47,7 +47,11 @@
     "base",
     "ethereum",
     "bnb-chain",
-    "robinhood-chain"
+    "robinhood-chain",
+    "ink",
+    "hyperevm",
+    "elysium",
+    "arc"
   ],
   "homepage": "https://helmswap.com",
   "repository": {

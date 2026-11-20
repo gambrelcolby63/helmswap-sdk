@@ -50,7 +50,7 @@ The process **refuses to start** if a `privateKey`, `mnemonic`, `signer`, or sim
 - Helm fee: **10 bps** majors, **50 bps** listed, **100 bps** long-tail. pump.fun bonding-curve coins pay the 1% long-tail Helm fee, **plus** pump.fun's own venue fee (~1.25%, not Helm's).
 - Keyless referrer share: **20% of Helm's fee**, live and verified on 19 Nov 2026. The user pays the same total fee.
 - A 40% API-key share exists in the API but **cannot be issued on the live host today**. Do not rely on it.
-- Live chains: Solana, Base, BNB Chain, Ethereum, Robinhood Chain. Arbitrum and Polygon can quote but cannot build.
+- Live chains: Solana, Base, BNB Chain, Ethereum, Robinhood Chain, Ink, HyperEVM, Elysium and Arc. Arbitrum and Polygon can quote but cannot build.
 - Tokenized stocks return an error (HTTP 451). US users can use the swap tools. Predictions and perps are not live and are not exposed.
 
 Helm does not claim the best price. Compare net output before the user signs.

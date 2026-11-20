@@ -1,7 +1,7 @@
 {
   "name": "helmswap-mcp",
-  "version": "0.1.0",
-  "description": "MCP server for HelmSwap: get_quote and build_swap return disclosed 10/50/100 bps quotes and unsigned transactions on Solana, Base, BNB Chain, Ethereum and Robinhood Chain. Never holds keys or broadcasts.",
+  "version": "0.1.1",
+  "description": "MCP server for HelmSwap: get_quote and build_swap return disclosed 10/50/100 bps quotes and unsigned transactions on Solana, Base, BNB Chain, Ethereum, Robinhood Chain, Ink, HyperEVM, Elysium and Arc. Never holds keys or broadcasts.",
   "keywords": [
     "helmswap",
     "mcp",
@@ -11,7 +11,14 @@
     "non-custodial",
     "solana",
     "base",
-    "pump-fun"
+    "pump-fun",
+    "ethereum",
+    "bnb-chain",
+    "robinhood-chain",
+    "ink",
+    "hyperevm",
+    "elysium",
+    "arc"
   ],
   "license": "MIT",
   "author": "Summit Private Credit LLC",
@@ -55,7 +62,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.20.0",
-    "helmswap": "0.1.0"
+    "helmswap": "0.1.1"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
