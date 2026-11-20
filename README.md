@@ -45,12 +45,11 @@ MCP (after publish):
 - **10 bps** majors, **50 bps** listed, **100 bps** long-tail / new tokens (including pump.fun bonding-curve coins).
 - pump.fun also charges its own curve fee (~1.25%), paid to the creator and pump.fun, not Helm.
 - Keyless integrator / referral share: **20% of Helm's fee**, live and verified on 19 Nov 2026. The user pays the same total.
-- A 40% API-key share is in the API code but **cannot be issued on the live host today** (no persistent key store). Do not advertise it yet.
 - Helm does not claim the best price.
 
-## Not live, not in these packages
+## Not in these packages
 
-Perps, predictions, and limit / DCA signing. Predictions and perps (when they exist) keep a US block; **spot swaps on this API are available to US users**. Tokenized stocks return HTTP 451.
+Perps and prediction markets are not part of this SDK (when they exist they keep a US block). **Spot swaps on this API are available to US users**. Tokenized stocks return HTTP 451. Limit and DCA orders, when enabled on HelmSwap, are used from the site, not these packages.
 
 Arbitrum and Polygon may return quotes; `build-tx` is refused until a fee router is deployed there.
 
@@ -61,8 +60,6 @@ npm install
 npm test
 npm run build
 ```
-
-Directory and BotFather listing copy, plus the exact publish order, is in `/workspace/launch-hours-20261118/BOT-TRAFFIC-LISTINGS.md`.
 
 ## License
 
